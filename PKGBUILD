@@ -1,4 +1,5 @@
-# Maintainer: Sébastien Luttringer
+# Maintainer: Tom Gundersen <teg@jklm.no>
+# Contributor: Sébastien Luttringer
 # Contributor: Joel Teichroeb <joel@teichroeb.net>
 
 pkgname=wayland
