@@ -3,7 +3,7 @@
 # Contributor: Joel Teichroeb <joel@teichroeb.net>
 
 pkgname=wayland
-pkgver=1.0.6
+pkgver=1.1.0
 pkgrel=1
 pkgdesc='A computer display server protocol'
 arch=('i686' 'x86_64')
@@ -26,4 +26,4 @@ package() {
   make DESTDIR="$pkgdir" install
   install -Dm 644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
 }
-md5sums=('936a2590aea69fa3c0cf234d54b9137c')
+md5sums=('d2dc9398a83692cafc16eba6e45f85d8')
