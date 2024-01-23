@@ -1,6 +1,10 @@
+# SPDX-License-Identifier: AGPL-3.0
+#
 # Maintainer: Sébastien Luttringer <seblu@archlinux.org>
 # Contributor: Tom Gundersen <teg@jklm.no>
 # Contributor: Joel Teichroeb <joel@teichroeb.net>
+# Contributor: Pellegrino Prevete (dvorak) <pellegrinoprevete@gmail.com>
+# Contributor: Truocolo <truocolo@aol.com>
 
 _checks="false"
 _docs="false"
@@ -31,11 +35,15 @@ depends=(
 makedepends=(
   'meson'
   'libxslt'
-  'doxygen'
-  'xmlto'
   'graphviz'
-  'docbook-xsl'
 )
+[[ "${_docs}" == "true" ]] && \
+  makedepends+=(
+    docbook-xsl
+    'doxygen'
+    xmlto
+  )
+
 validpgpkeys=('C7223EBE4EF66513B892598911A30156E0E67611'  # Bryce Harrington
               'C0066D7DB8E9AC6844D728715E54498E697F11D7'  # Derek Foreman
               '34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48') # emersion <contact@emersion.fr>
